@@ -1,14 +1,14 @@
 import './App.css';
 
-//import Panorama from './Panorama.jsx'
-import Pannellum from "./Pannellum"
+import Panorama from './Panorama.jsx'
+import Pannellum from "./Pannellum.jsx"
 import Sidebar from './Sidebar'
 
 function App() {
   return (
     <div className="App">
       <Sidebar/>
-      <Pannellum />
+      <Panorama />
     </div>
   );
 }

@@ -21,36 +21,34 @@ function Panorama() {
 
     const panImage = useRef(null);
 
-    const hotspotArray = props => {
-        return (
-            <React.Fragment>
+    const hotspotArray = [
                 <Pannellum.Hotspot
-                            type="info"
-                            pitch={ -2.061414181110537}
-                            yaw={ -60.27127993353921}
-                            hfov={150}
-                            text="Hotspot Info"
-                            //URL="https://github.com/farminf"
-                            />,
-                        <Pannellum.Hotspot
-                            type="info"
-                            pitch={ 2.9041245428623563}
-                            yaw={ 43.102330931646044}
-                            hfov={150}
-                            text="Hotspot Info"
-                            //URL="https://github.com/farminf"
-                        />,
-                        <Pannellum.Hotspot
-                            type="info"
-                            pitch={ 2.0380524407578284}
-                            yaw={ 51.77017113892216}
-                            hfov={150}
-                            text="Hotspot Info"
-                            //URL="https://github.com/farminf"
-                        />
-            </React.Fragment>
-        )
-    }
+                    type="info"
+                    pitch={ -2.061414181110537}
+                    yaw={ -60.27127993353921}
+                    hfov={150}
+                    text="Hotspot Info"
+                    //URL="https://github.com/farminf"
+                    />,
+                <Pannellum.Hotspot
+                    type="info"
+                    pitch={ 2.9041245428623563}
+                    yaw={ 43.102330931646044}
+                    hfov={150}
+                    text="Hotspot Info"
+                    //URL="https://github.com/farminf"
+                />,
+                <Pannellum.Hotspot
+                    type="info"
+                    pitch={ 2.0380524407578284}
+                    yaw={ 51.77017113892216}
+                    hfov={150}
+                    text="Hotspot Info"
+                    //URL="https://github.com/farminf"
+                />        
+    ]
+
+    
 
     useEffect(() => {
         /*const fetchData = async () => {
@@ -82,57 +80,7 @@ function Panorama() {
             
             {console.log(hotspotArray)}
             {createPannellumViewer()}
-            {/*
-            <div className='panorama'>
-                <Pannellum
-                    ref={panImage}
-                    id='pannellum'
-                    width='100%'
-                    height='500px'
-                    image= {panoImageSrc}
-                    pitch={5}
-                    yaw={0}
-                    hfov={200}
-                    autoLoad
-                    author='Lumoview Building Analytics GmbH'
-                    showZoomCtrl={false}
-                    hotspotDebug={false}
-                    onLoad={() => {
-                        console.log("panorama loaded");
-                        console.log(panImage.current);
-                    }}
-                    onMouseup={(event)=> {addHotspot(event)}}
-
-                    //onMousedown={(evt)=>{addHotspot(evt);}}
-                    //onMousedown={(evt)=>{console.log("Mouse Down", evt);}}
-                    //onMouseup={(evt)=>{console.log("Mouse Up", evt);}}                   
-                >
-                    <Pannellum.Hotspot
-                        type="info"
-                        pitch={ -2.061414181110537}
-                        yaw={ -60.27127993353921}
-                        hfov={150}
-                        text="Hotspot Info"
-                        //URL="https://github.com/farminf"
-                    />
-                    <Pannellum.Hotspot
-                        type="info"
-                        pitch={ 2.9041245428623563}
-                        yaw={ 43.102330931646044}
-                        hfov={150}
-                        text="Hotspot Info"
-                        //URL="https://github.com/farminf"
-                    />
-                    <Pannellum.Hotspot
-                        type="info"
-                        pitch={ 2.0380524407578284}
-                        yaw={ 51.77017113892216}
-                        hfov={150}
-                        text="Hotspot Info"
-                        //URL="https://github.com/farminf"
-                    />
-                </Pannellum>
-                </div> */}
+            
         </>
     );
 
@@ -161,36 +109,8 @@ function Panorama() {
                     hfov={200}
                     autoLoad
                     author='Lumoview Building Analytics GmbH'
-                    showZoomCtrl={false}
+                    showZoomCtrl={true}
                     hotspotDebug={false}
-                    hotSpots= {
-                        [
-                            {
-                                "type": "custom",
-                                "pitch": -2.061414181110537,
-                                "yaw": -60.27127993353921,
-                                "hfov": 150,
-                                "tooltip": hotspotDisplay1,
-                                "tooltipArg": "My hotspot 1"
-                            },
-                            {
-                                "type": "custom",
-                                "pitch":  2.9041245428623563,
-                                "yaw":  43.102330931646044,
-                                "hfov": 150,
-                                "tooltip":"hotspotDisplay1",
-                                "tooltipArg": "My hotspot 2"
-                            },
-                            {
-                                "type": "custom",
-                                "pitch": 2.0380524407578284,
-                                "yaw": 51.77017113892216,
-                                "hfov": 150,
-                                "tooltip": "hotspotDisplay1",
-                                "tooltipArg": "My hotspot 1"
-                            }                       
-                        ]
-                    }
                     onLoad={() => {
                         console.log("panorama loaded");
                         //console.log(panImage.current);
@@ -200,7 +120,9 @@ function Panorama() {
                     //onMousedown={(evt)=>{addHotspot(evt);}}
                     //onMousedown={(evt)=>{console.log("Mouse Down", evt);}}
                     //onMouseup={(evt)=>{console.log("Mouse Up", evt);}}                   
-                />
+                > 
+                    {hotspotArray}
+                </Pannellum>
             </div>   
 
         )
