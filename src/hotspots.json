@@ -1,0 +1,26 @@
+[
+    {
+        "type": "custom",
+        "pitch": -2.061414181110537,
+        "yaw": -60.27127993353921,
+        "hfov": 150,
+        "tooltip": hotspotDisplay1,
+        "tooltipArg": "My hotspot 1"
+    },
+    {
+        "type": "custom",
+        "pitch":  2.9041245428623563,
+        "yaw":  43.102330931646044,
+        "hfov": 150,
+        "tooltip":"hotspotDisplay1",
+        "tooltipArg": "My hotspot 2"
+    },
+    {
+        "type": "custom",
+        "pitch": 2.0380524407578284,
+        "yaw": 51.77017113892216,
+        "hfov": 150,
+        "tooltip": "hotspotDisplay1",
+        "tooltipArg": "My hotspot 1"
+    }
+]

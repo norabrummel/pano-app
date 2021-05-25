@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  margin: 0; 
 }
 
 .App-logo {
@@ -35,4 +35,49 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.panorama {
+  position:relative;
+  left: 14em;
+  width: 80%;
+  top: 1em;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  display: block;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width:13em ;
+  background-color: #f7f6f3;    /*#f7f6f3*/
+  font-size: 0.85rem;
+  padding:0 0 0 1em;
+}
+
+.header-list h5 {
+  font-size: 0.85rem;
+}
+
+.sidebar-nav a {
+  text-decoration: none;
+  color: black;
+}
+
+.logo-lumoview {
+  padding: 19em 0 0 3em ;
+  width: 50%;
+}
+
+.sub-menu-item {
+  padding-left: 15px;
+}
+
+.coord-info {
+  font-size: .85em;
+  padding: 1.6em 0 0 16.5em;
+  display: grid;
+  grid-template-columns: repeat(2, 15em);
 }
